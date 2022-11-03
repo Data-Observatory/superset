@@ -79,6 +79,13 @@ CACHE_CONFIG = {
 }
 DATA_CACHE_CONFIG = CACHE_CONFIG
 
+APP_NAME = ""
+APP_ICON = "/static/assets/images/do-logo.png"
+APP_ICON_WIDTH = 300
+# Path for routing when APP_ICON image is clicked
+LOGO_TARGET_PATH = '/superset/welcome/home' # Forwards to /superset/welcome/home
+LOGO_TOOLTIP = "Go Home" # Text displayed when hovering.
+FAVICONS = [{"href": "/static/assets/images/do-logo.png"}]
 
 class CeleryConfig(object):
     BROKER_URL = f"redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_CELERY_DB}"
