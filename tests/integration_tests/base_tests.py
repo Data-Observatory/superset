@@ -388,7 +388,7 @@ class SupersetTestCase(TestCase):
             cls=models.Database,
             criteria={"database_name": database_name},
             session=db.session,
-            sqlalchemy_uri="db_for_macros_testing://user@host:8080/hive",
+            sqlalchemy_uri="db_for_macros_testing://user@host:80/hive",
             id=db_id,
         )
 

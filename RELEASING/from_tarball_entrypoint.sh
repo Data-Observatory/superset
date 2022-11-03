@@ -38,4 +38,4 @@ superset load_examples
 superset init
 
 FLASK_ENV=development FLASK_APP="superset.app:create_app()" \
-flask run -p 8088 --with-threads --reload --debugger --host=0.0.0.0
+flask run -p 80 --with-threads --reload --debugger --host=0.0.0.0

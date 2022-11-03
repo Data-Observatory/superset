@@ -160,7 +160,7 @@ DEFAULT_TIME_FILTER = NO_TIME_RANGE
 
 SUPERSET_WEBSERVER_PROTOCOL = "http"
 SUPERSET_WEBSERVER_ADDRESS = "0.0.0.0"
-SUPERSET_WEBSERVER_PORT = 8088
+SUPERSET_WEBSERVER_PORT = 80
 
 # This is an important setting, and should be lower than your
 # [load balancer / proxy / envoy / kong / ...] timeout settings.
@@ -289,7 +289,7 @@ LOGO_TOOLTIP = ""
 LOGO_RIGHT_TEXT: Union[Callable[[], str], str] = ""
 
 # Enables SWAGGER UI for superset openapi spec
-# ex: http://localhost:8080/swagger/v1
+# ex: http://localhost:80/swagger/v1
 FAB_API_SWAGGER_UI = True
 
 # Druid query timezone
@@ -1211,7 +1211,7 @@ WEBDRIVER_CONFIGURATION: Dict[Any, Any] = {"service_log_path": "/dev/null"}
 WEBDRIVER_OPTION_ARGS = ["--headless", "--marionette"]
 
 # The base URL to query for accessing the user interface
-WEBDRIVER_BASEURL = "http://0.0.0.0:8080/"
+WEBDRIVER_BASEURL = "http://0.0.0.0:80/"
 # The base URL for the email report hyperlinks.
 WEBDRIVER_BASEURL_USER_FRIENDLY = WEBDRIVER_BASEURL
 # Time selenium will wait for the page to load and render for the email report.
@@ -1340,7 +1340,7 @@ GLOBAL_ASYNC_QUERIES_TRANSPORT = "polling"
 GLOBAL_ASYNC_QUERIES_POLLING_DELAY = int(
     timedelta(milliseconds=500).total_seconds() * 1000
 )
-GLOBAL_ASYNC_QUERIES_WEBSOCKET_URL = "ws://127.0.0.1:8080/"
+GLOBAL_ASYNC_QUERIES_WEBSOCKET_URL = "ws://127.0.0.1:80/"
 
 # Embedded config options
 GUEST_ROLE_NAME = "Public"

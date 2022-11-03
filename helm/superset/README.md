@@ -99,7 +99,7 @@ helm install my-superset superset/superset
 | runAsUser | int | `0` | User ID directive. This user must have enough permissions to run the bootstrap script Running containers as root is not recommended in production. Change this to another UID - e.g. 1000 to be more secure |
 | service.annotations | object | `{}` |  |
 | service.loadBalancerIP | string | `nil` |  |
-| service.port | int | `8088` |  |
+| service.port | int | `80` |  |
 | service.type | string | `"ClusterIP"` |  |
 | serviceAccount.annotations | object | `{}` |  |
 | serviceAccount.create | bool | `false` | Create custom service account for Superset. If create: true and name is not provided, `superset.fullname` will be used. |
@@ -217,7 +217,7 @@ helm install my-superset superset/superset
 | supersetWebsockets.replicaCount | int | `1` |  |
 | supersetWebsockets.resources | object | `{}` |  |
 | supersetWebsockets.service.annotations | object | `{}` |  |
-| supersetWebsockets.service.port | int | `8080` |  |
+| supersetWebsockets.service.port | int | `80` |  |
 | supersetWebsockets.service.type | string | `"ClusterIP"` |  |
 | supersetWebsockets.startupProbe.failureThreshold | int | `60` |  |
 | supersetWebsockets.startupProbe.httpGet.path | string | `"/health"` |  |

@@ -54,7 +54,7 @@ class TestDatabaseModel(SupersetTestCase):
         SupersetTestCase.is_module_installed("requests"), "requests not installed"
     )
     def test_database_schema_presto(self):
-        sqlalchemy_uri = "presto://presto.airbnb.io:8080/hive/default"
+        sqlalchemy_uri = "presto://presto.airbnb.io:80/hive/default"
         model = Database(database_name="test_database", sqlalchemy_uri=sqlalchemy_uri)
 
         with model.get_sqla_engine_with_context() as engine:
@@ -65,7 +65,7 @@ class TestDatabaseModel(SupersetTestCase):
             db = make_url(engine.url).database
             self.assertEqual("hive/core_db", db)
 
-        sqlalchemy_uri = "presto://presto.airbnb.io:8080/hive"
+        sqlalchemy_uri = "presto://presto.airbnb.io:80/hive"
         model = Database(database_name="test_database", sqlalchemy_uri=sqlalchemy_uri)
 
         with model.get_sqla_engine_with_context() as engine:

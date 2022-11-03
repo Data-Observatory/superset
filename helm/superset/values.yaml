@@ -195,7 +195,7 @@ initImage:
 
 service:
   type: ClusterIP
-  port: 8088
+  port: 80
   annotations:
     {}
     # cloud.google.com/load-balancer-type: "Internal"
@@ -529,7 +529,7 @@ supersetWebsockets:
   # @default -- see `values.yaml`
   config:
     {
-      "port": 8080,
+      "port": 80,
       "logLevel": "debug",
       "logToFile": false,
       "logFilename": "app.log",
@@ -549,7 +549,7 @@ supersetWebsockets:
   service:
     type: ClusterIP
     annotations: {}
-    port: 8080
+    port: 80
   command: []
   resources: {}
   deploymentAnnotations: {}
